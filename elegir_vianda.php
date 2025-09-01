@@ -1,3 +1,30 @@
+
+<nav>
+    <ul style="list-style: none; display: flex; justify-content: flex-end; gap: 15px; margin: 0; padding: 10px; background: #333;">
+        <li><a href="panel.php" style="color: white; text-decoration: none;">Panel</a></li>
+        <li><a href="elegir_vianda.php" style="color: white; text-decoration: none;">Elegir Vianda</a></li>
+        <li><a href="cancelar_vianda.php" style="color: white; text-decoration: none;">Cancelar Vianda</a></li>
+        <li><a href="logout.php" style="color: white; text-decoration: none; font-weight: bold;">Cerrar Sesión</a></li>
+    </ul>
+</nav>
+
+
+<!-- Botón de Cerrar Sesión en la esquina superior derecha -->
+<div style="position: absolute; top: 10px; right: 10px;">
+    <form action="logout.php" method="post">
+        <button type="submit" style="
+            background-color: #e74c3c; 
+            color: white; 
+            border: none; 
+            padding: 10px 15px; 
+            border-radius: 5px; 
+            cursor: pointer;
+        ">
+            Cerrar Sesión
+        </button>
+    </form>
+</div>
+
 <?php
 session_start();
 include "db.php";
