@@ -80,7 +80,7 @@ unset($_SESSION['alerta_ok'], $_SESSION['alerta_error']);
     </div>
 
     <!-- Panel del encargado en página distinta -->
-    <!-- <a href="clave_panel.php"><button class="panel-button">Ver Panel del Encargado</button></a> -->
+    <a href="clave_panel.php"><button class="panel-button">Ver Panel del Encargado</button></a>
 
   <?php endif; ?>
 
