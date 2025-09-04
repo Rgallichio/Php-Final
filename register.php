@@ -13,11 +13,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $sql = "INSERT INTO users (nombre, apellido, correo, dni, seccion, contrasena)
             VALUES ('$nombre', '$apellido', '$correo', '$dni', '$seccion', '$contrasena')";
+    // Verificar si el DNI ya existe
+    $checkDNI = "SELECT dni FROM users WHERE dni = '$dni'";
+    $result = $conn->query($checkDNI);
 
+    if ($result->num_rows > 0) {
+    // El DNI ya está registrado
+    echo "<p>⚠️ El usuario con DNI $dni ya está registrado. <a href='login.php'>Inicie sesión aquí</a></p>";
+    exit();
+    }
     if ($conn->query($sql) === TRUE) {
         // ✅ Mostrar mensaje de éxito
         echo "<p>✅ Registro exitoso. <a href='login.php'>Inicie sesión aquí</a></p>";
-        exit();
+        exit(); 
     } else {
         echo "❌ Error: " . $conn->error;
     }
