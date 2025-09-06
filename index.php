@@ -27,61 +27,128 @@ unset($_SESSION['alerta_ok'], $_SESSION['alerta_error']);
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Compañía Nº 38</title>
-  <link rel="stylesheet" href="style2.css" />
+  <title>Compañía de Ingenieros QBN Apoyo a las Emergencias 601</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body>
-
-  <div class="top-bar">
-    <h1>Compañía Nº 38</h1>
-    <div class="nav-buttons">
-      <?php if (!$logueado): ?>
-        <a href="register.php">Registrarse</a>
-        <a href="login.php">Iniciar Sesión</a>
-      <?php else: ?>
-        <img class="verificado" src="tilde.png" alt="Verificado">
-      <?php endif; ?>
+<!-- Added bg-patrol class for military patrol background -->
+<body class="bg-patrol">
+  <!-- Updated header with military styling and proper unit name -->
+  <header class="military-header">
+    <div class="header-content">
+      <div class="unit-info">
+        <h1>COMPAÑÍA DE INGENIEROS QBN</h1>
+        <h2>APOYO A LAS EMERGENCIAS 601</h2>
+        <p>SISTEMA DE GESTIÓN DE VIANDAS</p>
+      </div>
+      <div class="nav-buttons">
+        <?php if (!$logueado): ?>
+          <a href="register.php" class="btn btn-secondary">REGISTRARSE</a>
+          <a href="login.php" class="btn btn-primary">INICIAR SESIÓN</a>
+          <a href="recuperar.php" class="btn btn-link">RECUPERAR USUARIO</a>
+        <?php else: ?>
+          <div class="user-status">
+            <span class="status-verified">✓ VERIFICADO</span>
+            <a href="logout.php" class="btn btn-secondary">CERRAR SESIÓN</a>
+          </div>
+        <?php endif; ?>
+      </div>
     </div>
-  </div>
+  </header>
 
   <?php if ($logueado): ?>
     <?php if ($alerta_ok): ?>
-      <script> alert(<?php echo json_encode($alerta_ok); ?>); </script>
+      <div class="alert alert-success">
+        <?php echo htmlspecialchars($alerta_ok); ?>
+      </div>
     <?php endif; ?>
     <?php if ($alerta_error): ?>
-      <script> alert(<?php echo json_encode($alerta_error); ?>); </script>
+      <div class="alert alert-error">
+        <?php echo htmlspecialchars($alerta_error); ?>
+      </div>
     <?php endif; ?>
 
-    <div class="main-content">
-      <h2>Elegir Vianda</h2>
-
-      <?php if (!$bloqueado): ?>
-        <!-- Mostrar opciones SOLO si NO hay pedido en últimas 12h -->
-        <form action="elegir_vianda.php" method="POST">
-          <div class="vianda-options">
-            <label><input type="checkbox" name="vianda[]" value="almuerzo" /> Almuerzo</label>
-            <label><input type="checkbox" name="vianda[]" value="cena" /> Cena</label>
-          </div>
-          <button type="submit" class="submit-button">Enviar</button>
-        </form>
-      <?php else: ?>
-        <!-- Bloqueado: ocultar "Elegir vianda" y mostrar solo "Cancelar viandas" -->
-        <p class="mensaje-bloqueo">Ya hiciste un pedido. Solo podés hacer otro luego de 12 horas.</p>
-      <?php endif; ?>
-
-      <h2>Cancelar Viandas</h2>
-      <form action="cancelar_vianda.php" method="POST">
-        <div class="cancel-options">
-          <label><input type="checkbox" name="cancelar[]" value="almuerzo" /> Almuerzo</label>
-          <label><input type="checkbox" name="cancelar[]" value="cena" /> Cena</label>
+    <!-- Updated main content with military card styling -->
+    <main class="main-content">
+      <div class="card">
+        <div class="card-header">
+          <h3>SELECCIÓN DE VIANDAS</h3>
         </div>
-        <button type="submit" class="submit-button cancel-button">Cancelar</button>
-      </form>
-    </div>
+        <div class="card-body">
+          <?php if (!$bloqueado): ?>
+            <form action="elegir_vianda.php" method="POST" class="vianda-form">
+              <div class="form-group">
+                <label class="form-label">Seleccione las viandas deseadas:</label>
+                <div class="checkbox-group">
+                  <label class="checkbox-item">
+                    <input type="checkbox" name="vianda[]" value="almuerzo" />
+                    <span class="checkmark"></span>
+                    ALMUERZO
+                  </label>
+                  <label class="checkbox-item">
+                    <input type="checkbox" name="vianda[]" value="cena" />
+                    <span class="checkmark"></span>
+                    CENA
+                  </label>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary btn-full">CONFIRMAR PEDIDO</button>
+            </form>
+          <?php else: ?>
+            <div class="alert alert-warning">
+              <strong>PEDIDO ACTIVO:</strong> Ya realizó un pedido. Podrá realizar otro después de 12 horas.
+            </div>
+          <?php endif; ?>
+        </div>
+      </div>
 
-    <!-- Panel del encargado en página distinta -->
-    <a href="clave_panel.php"><button class="panel-button">Ver Panel del Encargado</button></a>
+      <div class="card">
+        <div class="card-header">
+          <h3>CANCELAR VIANDAS</h3>
+        </div>
+        <div class="card-body">
+          <form action="cancelar_vianda.php" method="POST" class="vianda-form">
+            <div class="form-group">
+              <label class="form-label">Seleccione las viandas a cancelar:</label>
+              <div class="checkbox-group">
+                <label class="checkbox-item">
+                  <input type="checkbox" name="cancelar[]" value="almuerzo" />
+                  <span class="checkmark"></span>
+                  ALMUERZO
+                </label>
+                <label class="checkbox-item">
+                  <input type="checkbox" name="cancelar[]" value="cena" />
+                  <span class="checkmark"></span>
+                  CENA
+                </label>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-destructive btn-full">CANCELAR VIANDAS</button>
+          </form>
+        </div>
+      </div>
 
+      <!-- Updated panel access button with military styling -->
+      <div class="panel-access">
+        <a href="clave_panel.php" class="btn btn-secondary btn-full">ACCESO PANEL DEL ENCARGADO</a>
+      </div>
+    </main>
+  <?php else: ?>
+    <!-- Added welcome section for non-logged users -->
+    <main class="main-content">
+      <div class="welcome-section">
+        <div class="card">
+          <div class="card-body text-center">
+            <h3>BIENVENIDO AL SISTEMA DE VIANDAS</h3>
+            <p>Para acceder al sistema, debe iniciar sesión con sus credenciales.</p>
+            <p>Si no posee una cuenta, puede registrarse o recuperar sus datos de acceso.</p>
+            <div class="button-group">
+              <a href="login.php" class="btn btn-primary">INICIAR SESIÓN</a>
+              <a href="register.php" class="btn btn-secondary">REGISTRARSE</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
   <?php endif; ?>
 
 </body>
