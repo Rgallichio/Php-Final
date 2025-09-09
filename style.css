@@ -1,3 +1,19 @@
+/*logo*/
+.titulo-principal {
+    display: flex;
+    align-items: center;
+    gap: 5px;  /* espacio entre el logo y el texto */
+    font-size: 5;
+    font-weight: bold;
+    color: var(--military-text);
+}
+
+.military-header .header-content img {
+    width: 20%;   /* ajustá el tamaño a gusto */
+    height: auto;
+}
+
+
 /* Military Design System - Professional & Functional */
 :root {
   --military-primary: #1f4b0e;
@@ -30,21 +46,21 @@ body {
 
 /* Background Classes for Different Pages */
 .bg-soldier {
-  background: linear-gradient(rgba(165, 137, 137, 0.7), rgba(0, 0, 0, 0.5)), url("images/fondo9.png");
+  background: linear-gradient(rgba(20, 180, 42, 0.7), rgba(0, 0, 0, 0.5)), url("imagenes/fondo9.png");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
 }
 
 .bg-helicopters {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url("images/fondo13.png");
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url("imagenes/fondo13.png");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
 }
 
 .bg-patrol {
-  background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.45)), url("images/fondo5.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.45)), url("imagenes/fondo5.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -346,15 +362,15 @@ body:not(.bg-soldier):not(.bg-helicopters):not(.bg-patrol) {
 }
 
 .btn-destructive {
-  background: linear-gradient(135deg, var(--military-error) 0%, #b91c1c 100%);
+  background: linear-gradient(135deg, var(--military-error) 0%, #23914b 100%);
   color: white;
-  box-shadow: 0 4px 12px rgba(220, 38, 38, 0.3);
+  box-shadow: 0 4px 12px rgba(14, 109, 36, 0.3);
 }
 
 .btn-destructive:hover {
-  background: linear-gradient(135deg, #b91c1c 0%, #991b1b 100%);
+  background: linear-gradient(135deg, #298a0c7e 0%, #0a751d 100%);
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(220, 38, 38, 0.4);
+  box-shadow: 0 8px 20px rgba(13, 137, 26, 0.653);
 }
 
 .btn-link {
@@ -396,7 +412,7 @@ body:not(.bg-soldier):not(.bg-helicopters):not(.bg-patrol) {
 
 .alert-error {
   background: rgba(254, 226, 226, 0.9);
-  color: #991b1b;
+  color: #06a3097d;
   border-color: rgba(252, 165, 165, 0.8);
 }
 
@@ -546,4 +562,11 @@ body:not(.bg-soldier):not(.bg-helicopters):not(.bg-patrol) {
   .checkbox-item {
     padding: 0.5rem;
   }
+}
+
+.bg-recuperar{
+ background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.45)), url("imagenes/fondo5.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; 
 }

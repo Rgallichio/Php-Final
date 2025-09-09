@@ -38,6 +38,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+<style>
+    body{
+        background-image: url("imagenes/fondo1.jpg");
+    }
+</style>
+
+</div>
     <header class="military-header">
         <div class="header-content">
             <div class="unit-info">

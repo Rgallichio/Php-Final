@@ -27,7 +27,8 @@ unset($_SESSION['alerta_ok'], $_SESSION['alerta_error']);
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Compañía de Ingenieros QBN Apoyo a las Emergencias 601</title>
+  <title>
+    Compañía de Ingenieros QBN Apoyo a las Emergencias 601</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <!-- Added bg-patrol class for military patrol background -->
@@ -36,7 +37,11 @@ unset($_SESSION['alerta_ok'], $_SESSION['alerta_error']);
   <header class="military-header">
     <div class="header-content">
       <div class="unit-info">
-        <h1>COMPAÑÍA DE INGENIEROS QBN</h1>
+        <h1 class="titulo-principal">
+    <img src="img/qbn.png.jpeg" alt="Logo QBN" class="logo-qbn">
+    COMPAÑÍA DE INGENIEROS QBN
+</h1>
+
         <h2>APOYO A LAS EMERGENCIAS 601</h2>
         <p>SISTEMA DE GESTIÓN DE VIANDAS</p>
       </div>
