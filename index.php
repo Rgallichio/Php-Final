@@ -31,19 +31,19 @@ unset($_SESSION['alerta_ok'], $_SESSION['alerta_error']);
     Compañía de Ingenieros QBN Apoyo a las Emergencias 601</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-<!-- Added bg-patrol class for military patrol background -->
+
 <body class="bg-patrol">
-  <!-- Updated header with military styling and proper unit name -->
+  
   <header class="military-header">
     <div class="header-content">
       <div class="unit-info">
         <h1 class="titulo-principal">
-    <img src="img/qbn.png.jpeg" alt="Logo QBN" class="logo-qbn">
-    COMPAÑÍA DE INGENIEROS QBN
+    <img src="img/qbn.png.png" alt="Logo QBN" class="logo-qbn">
+    COMPAÑÍA DE INGENIEROS QBN APOYO A LAS EMERGENCIAS 601
 </h1>
 
-        <h2>APOYO A LAS EMERGENCIAS 601</h2>
-        <p>SISTEMA DE GESTIÓN DE VIANDAS</p>
+        <h2>
+          SISTEMA DE GESTIÓN DE VIANDAS</h2>
       </div>
       <div class="nav-buttons">
         <?php if (!$logueado): ?>
