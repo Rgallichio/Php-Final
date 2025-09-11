@@ -38,7 +38,7 @@ unset($_SESSION['alerta_ok'], $_SESSION['alerta_error']);
     <div class="header-content">
       <div class="unit-info">
         <h1 class="titulo-principal">
-    <img src="img/qbn.png.png" alt="Logo QBN" class="logo-qbn">
+    <img src="img/qbn.png" alt="Logo QBN" class="logo-qbn">
     COMPAÑÍA DE INGENIEROS QBN APOYO A LAS EMERGENCIAS 601
 </h1>
 
