@@ -34,6 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 <!-- Added military background class -->
 <body class="bg-helicopters">
+    
     <!-- Added military header structure -->
     <header class="military-header">
         <div class="header-content">

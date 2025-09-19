@@ -93,6 +93,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <h3>INICIAR SESIÓN</h3>
                 </div>
                 <div class="card-body">
+                          <div class="">
+        <a href="clave_panel.php" class="btn btn-secondary btn-full">ACCESO PANEL DEL ENCARGADO</a>
+      </div>
                     <?php if (isset($_SESSION['registro_exitoso'])): ?>
                         <div class="alert alert-success">
                             <?php echo htmlspecialchars($_SESSION['registro_exitoso']); ?>

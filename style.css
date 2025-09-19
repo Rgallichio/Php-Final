@@ -2,7 +2,7 @@
 .titulo-principal {
   display: flex;
   align-items: center;
-  gap: 15px; /* increased gap for better spacing */
+  gap: 10px; /* increased gap for better spacing */
   font-size: 1.2rem; /* adjusted font size */
   font-weight: bold;
   color: var(--military-text);
@@ -38,7 +38,7 @@
 }
 
 .military-header .header-content img {
-  width: 20%; /* ajustá el tamaño a gusto */
+  width:10%; /* ajustá el tamaño a gusto */
   height: auto;
 }
 

@@ -78,6 +78,7 @@ unset($_SESSION['alerta_ok'], $_SESSION['alerta_error']);
         <div class="card-header">
           <h3>SELECCIÓN DE VIANDAS</h3>
         </div>
+        
         <div class="card-body">
           <?php if (!$bloqueado): ?>
             <form action="elegir_vianda.php" method="POST" class="vianda-form">
@@ -133,9 +134,7 @@ unset($_SESSION['alerta_ok'], $_SESSION['alerta_error']);
       </div>
 
       <!-- Updated panel access button with military styling -->
-      <div class="panel-access">
-        <a href="clave_panel.php" class="btn btn-secondary btn-full">ACCESO PANEL DEL ENCARGADO</a>
-      </div>
+
     </main>
   <?php else: ?>
     <!-- Added welcome section for non-logged users -->
