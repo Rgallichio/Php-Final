@@ -40,16 +40,13 @@ unset($_SESSION['alerta_ok'], $_SESSION['alerta_error']);
         <h1 class="titulo-principal">
     <img src="img/qbn.png" alt="Logo QBN" class="logo-qbn">
     COMPAÑÍA DE INGENIEROS QBN APOYO A LAS EMERGENCIAS 601
-</h1>
-
-        <h2>
-          SISTEMA DE GESTIÓN DE VIANDAS</h2>
+    SISTEMA DE GESTIÓN DE VIANDAS
+</h1>  
       </div>
       <div class="nav-buttons">
         <?php if (!$logueado): ?>
-          <a href="register.php" class="btn btn-secondary">REGISTRARSE</a>
-          <a href="login.php" class="btn btn-primary">INICIAR SESIÓN</a>
-          <a href="recuperar.php" class="btn btn-link">RECUPERAR USUARIO</a>
+          
+  
         <?php else: ?>
           <div class="user-status">
             <span class="status-verified">✓ VERIFICADO</span>
@@ -148,6 +145,8 @@ unset($_SESSION['alerta_ok'], $_SESSION['alerta_error']);
             <div class="button-group">
               <a href="login.php" class="btn btn-primary">INICIAR SESIÓN</a>
               <a href="register.php" class="btn btn-secondary">REGISTRARSE</a>
+              <a href="recuperar.php" class="btn btn-link">RECUPERAR USUARIO</a>
+
             </div>
           </div>
         </div>

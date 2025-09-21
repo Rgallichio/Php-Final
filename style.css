@@ -47,7 +47,7 @@
   --military-primary: #2ecc71;
   --military-secondary: #27ae60;
   --military-background: #1a1a1a;
-  --military-surface: #2c3e50;
+  --military-surface: #485563;
   --military-border: #2ecc71;
   --military-text: #ecf0f1;
   --military-text-light: #bdc3c7;
@@ -75,21 +75,21 @@ body {
 
 /* Updated background classes for darker theme */
 .bg-soldier {
-  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url("imagenes/fondo9.png");
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url("imagenes/fondoFin.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
 }
 
 .bg-helicopters {
-  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url("imagenes/fondo13.png");
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url("imagenes/fondoFin.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
 }
 
 .bg-patrol {
-  background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.7)), url("imagenes/fondo9.png");
+  background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.7)), url("imagenes/fondoFin.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -624,7 +624,7 @@ body:not(.bg-soldier):not(.bg-helicopters):not(.bg-patrol) {
 }
 
 .bg-recuperar {
-  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url("imagenes/fondo5.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url("imagenes/fondoFin.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
