@@ -142,7 +142,7 @@ unset($_SESSION['alerta_ok'], $_SESSION['alerta_error']);
             <h3>BIENVENIDO AL SISTEMA DE VIANDAS</h3>
             <p>Para acceder al sistema, debe iniciar sesión con sus credenciales.</p>
             <p>Si no posee una cuenta, puede registrarse o recuperar sus datos de acceso.</p>
-            <div class="button-group">
+            <div class="main-content">
               <a href="login.php" class="btn btn-primary">INICIAR SESIÓN</a>
               <a href="register.php" class="btn btn-secondary">REGISTRARSE</a>
               <a href="recuperar.php" class="btn btn-link">RECUPERAR USUARIO</a>
