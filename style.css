@@ -184,13 +184,19 @@ body:not(.bg-soldier):not(.bg-helicopters):not(.bg-patrol) {
 
 /* Main Content */
 .main-content {
-  max-width: 1200px;
+  max-width: 36em;
   margin: 0 auto;
-  padding: 2rem 1rem;
+  padding: 1rem;
   position: relative;
   z-index: 1;
 }
-
+.main-content-index{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+  position: relative;
+  z-index: 1;
+}
 .auth-container {
   max-width: 500px;
   margin: 2rem auto;
