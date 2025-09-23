@@ -1,11 +1,23 @@
+
+.logo-qbn, .logo-extra {
+  width:10%;   /* ajustá el tamaño para que ambos se vean similares */
+  height:10%;
+}
+
 /*logo*/
 .titulo-principal {
   display: flex;
   align-items: center;
-  gap: 10px; /* increased gap for better spacing */
-  font-size: 1.2rem; /* adjusted font size */
+  justify-content: center; /* centra el texto y deja logos a los lados */
+  gap:10px; /* espacio entre logo y texto */
+  font-size: 1.2rem;
   font-weight: bold;
   color: var(--military-text);
+}
+
+.military-header .header-content img {
+  width:10%; /* ajustá el tamaño a gusto del logo*/
+  height:10%;
 }
 
 /* Added SECUETEC logo styling */
@@ -37,10 +49,7 @@
   letter-spacing: 0.5px;
 }
 
-.military-header .header-content img {
-  width:10%; /* ajustá el tamaño a gusto del logo*/
-  height: auto;
-}
+
 
 /* Updated color system to match dark green military theme */
 :root {

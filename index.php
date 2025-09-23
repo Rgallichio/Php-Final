@@ -38,10 +38,12 @@ unset($_SESSION['alerta_ok'], $_SESSION['alerta_error']);
     <div class="header-content">
       <div class="unit-info">
         <h1 class="titulo-principal">
-    <img src="img/qbn.png" alt="Logo QBN" class="logo-qbn">
+    <img src="img/ejercito.png" alt="Logo Ejército Argentino" class="logo-extra">
     COMPAÑÍA DE INGENIEROS QBN APOYO A LAS EMERGENCIAS 601
     SISTEMA DE GESTIÓN DE VIANDAS
-</h1>  
+    <img src="img/qbn.png" alt="Logo QBN" class="logo-qbn">
+</h1>
+ 
       </div>
       <div class="nav-buttons">
         <?php if (!$logueado): ?>
