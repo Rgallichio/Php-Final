@@ -1,7 +1,14 @@
+/* File: logo-qbn.css */
+.logo-qbn {
+  width: 10%; /* Adjust size for uniform appearance */
+  height: 10%;
+  margin: 0 3em; /* Adds horizontal spacing */
+}
 
-.logo-qbn, .logo-extra {
-  width:10%;   /* ajustá el tamaño para que ambos se vean similares */
-  height:10%;
+/* File: logo-extra.css */
+.logo-extra {
+  width: 10%; /* Adjust size for uniform appearance */
+  height: 10%;
   margin: 0 3em; /* Adds horizontal spacing */
 }
 
@@ -16,9 +23,13 @@
   color: var(--military-text);
 }
 
-.military-header .header-content img {
+.header-content img {
   width:10%; /* ajustá el tamaño a gusto del logo*/
   height:10%;
+}
+.military-header img{
+  width:8%; /* ajustá el tamaño a gusto del logo*/
+  height:8%;
 }
 
 /* Added SECUETEC logo styling */
