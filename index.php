@@ -39,8 +39,8 @@ unset($_SESSION['alerta_ok'], $_SESSION['alerta_error']);
       <div class="unit-info">
         <h1 class="titulo-principal">
     <img src="img/ejercito.png" alt="Logo Ejército Argentino" class="logo-extra">
-    COMPAÑÍA DE INGENIEROS QBN APOYO A LAS EMERGENCIAS 601
-    SISTEMA DE GESTIÓN DE VIANDAS
+    CA ING QBN APY EMG 601 <br>
+    <div class="subtitulo">SISTEMA DE GESTIÓN DE VIANDAS</div>
     <img src="img/qbn.png" alt="Logo QBN" class="logo-qbn">
 </h1>
  

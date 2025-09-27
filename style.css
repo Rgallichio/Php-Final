@@ -2,6 +2,7 @@
 .logo-qbn, .logo-extra {
   width:10%;   /* ajustá el tamaño para que ambos se vean similares */
   height:10%;
+  margin: 0 3em; /* Adds horizontal spacing */
 }
 
 /*logo*/
@@ -48,6 +49,11 @@
   color: #000;
   letter-spacing: 0.5px;
 }
+.subtitulo {
+ font-size: 0.6em; /* Adjusts the font size for the subtitle */
+ display:contents; /* Ensures the subtitle behaves as a block element */
+}
+     
 
 
 
