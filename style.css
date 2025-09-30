@@ -70,7 +70,7 @@
 
 /* Updated color system to match dark green military theme */
 :root {
-  --military-primary: #071a01f3;
+  --military-primary: #0b2802f3;
   --military-secondary: #0b3c20;
   --military-background: #1a1a1a;
   --military-surface: #bac4cf;
@@ -427,6 +427,7 @@ body:not(.bg-soldier):not(.bg-helicopters):not(.bg-patrol) {
   background: linear-gradient(135deg, var(--military-primary) 0%, var(--military-secondary) 100%);
   color: #fff;
   box-shadow: 0 4px 12px rgba(46, 204, 113, 0.3);
+  margin-right: 1em;
 }
 
 .btn-primary:hover {
@@ -443,6 +444,18 @@ body:not(.bg-soldier):not(.bg-helicopters):not(.bg-patrol) {
 }
 
 .btn-secondary:hover {
+  background: linear-gradient(135deg, rgba(52, 73, 94, 1) 0%, rgba(44, 62, 80, 1) 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  border-color: var(--military-primary);
+}
+.btn-secondary-MOD {
+  color: var(--military-text);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  margin-top: 1em;
+}
+
+.btn-secondary-MOD:hover {
   background: linear-gradient(135deg, rgba(52, 73, 94, 1) 0%, rgba(44, 62, 80, 1) 100%);
   transform: translateY(-2px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);

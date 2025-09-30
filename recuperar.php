@@ -8,14 +8,14 @@ $error = "";
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nombre = trim($_POST['nombre']);
     $apellido = trim($_POST['apellido']);
-    
+
     if (!empty($nombre) && !empty($apellido)) {
         $sql = "SELECT dni, nombre, apellido FROM users WHERE LOWER(nombre) = LOWER(?) AND LOWER(apellido) = LOWER(?)";
         $stmt = $conn->prepare($sql);
         $stmt->bind_param("ss", $nombre, $apellido);
         $stmt->execute();
         $result = $stmt->get_result();
-        
+
         if ($result->num_rows > 0) {
             $user = $result->fetch_assoc();
             $mensaje = "Usuario encontrado: " . htmlspecialchars($user['nombre']) . " " . htmlspecialchars($user['apellido']) . " - DNI: " . htmlspecialchars($user['dni']);
@@ -31,29 +31,26 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recuperar Usuario - Compañía de Ingenieros QBN 601</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
 
-<style>
-    body{
-        background-image: url("imagenes/fondo1.jpg");
-    }
-</style>
-
-</div>
+<body class="bg-soldier">
     <header class="military-header">
         <div class="header-content">
             <div class="unit-info">
-                <h1>COMPAÑÍA DE INGENIEROS QBN</h1>
-                <h2>APOYO A LAS EMERGENCIAS 601</h2>
-                <p>RECUPERACIÓN DE USUARIO</p>
+                <h1 class="titulo-principal">
+                    <img src="img/ejercito.png" alt="Logo Ejército Argentino" class="logo-extra">
+                    CA ING QBN APY EMG 601 <br>
+                    <div class="subtitulo">SISTEMA DE GESTIÓN DE VIANDAS</div>
+                    <img src="img/qbn.png" alt="Logo QBN" class="logo-qbn">
+                </h1>
             </div>
-        </div>
+            <div class="nav-buttons">
     </header>
 
     <main class="main-content">
@@ -68,27 +65,29 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             <?php echo $mensaje; ?>
                         </div>
                     <?php endif; ?>
-                    
+
                     <?php if (!empty($error)): ?>
                         <div class="alert alert-error">
                             <?php echo htmlspecialchars($error); ?>
                         </div>
                     <?php endif; ?>
-                    
+
                     <form method="POST" class="auth-form">
                         <div class="form-group">
                             <label for="nombre" class="form-label">NOMBRE:</label>
-                            <input type="text" id="nombre" name="nombre" class="form-input" placeholder="Ingrese su nombre" required>
+                            <input type="text" id="nombre" name="nombre" class="form-input"
+                                placeholder="Ingrese su nombre" required>
                         </div>
-                        
+
                         <div class="form-group">
                             <label for="apellido" class="form-label">APELLIDO:</label>
-                            <input type="text" id="apellido" name="apellido" class="form-input" placeholder="Ingrese su apellido" required>
+                            <input type="text" id="apellido" name="apellido" class="form-input"
+                                placeholder="Ingrese su apellido" required>
                         </div>
-                        
+
                         <button type="submit" class="btn btn-primary btn-full">BUSCAR USUARIO</button>
                     </form>
-                    
+
                     <div class="auth-links">
                         <a href="login.php" class="btn btn-link">Volver al login</a>
                         <a href="register.php" class="btn btn-link">Registrarse</a>
@@ -99,4 +98,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </div>
     </main>
 </body>
+
 </html>

@@ -16,6 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,16 +24,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <link rel="stylesheet" href="style.css">
 </head>
 <!-- Added bg-helicopters class for military helicopter background -->
+
 <body class="bg-helicopters">
     <!-- Updated header with military styling -->
+
     <header class="military-header">
         <div class="header-content">
             <div class="unit-info">
-                <h1>ACCESO RESTRINGIDO</h1>
-                <h2>PANEL DEL ENCARGADO</h2>
-                <p>COMPAÑÍA DE INGENIEROS QBN 601</p>
+                <h1 class="titulo-principal">
+                    <img src="img/ejercito.png" alt="Logo Ejército Argentino" class="logo-extra">
+                    CA ING QBN APY EMG 601 <br>
+                    <div class="subtitulo">SISTEMA DE GESTIÓN DE VIANDAS</div>
+                    <img src="img/qbn.png" alt="Logo QBN" class="logo-qbn">
+                </h1>
             </div>
-        </div>
+            <div class="nav-buttons">
     </header>
 
     <!-- Updated access form with military card styling -->
@@ -48,16 +54,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             <?php echo htmlspecialchars($error); ?>
                         </div>
                     <?php endif; ?>
-                    
+
                     <form method="POST" class="auth-form">
                         <div class="form-group">
                             <label for="clave" class="form-label">CLAVE DE ACCESO:</label>
-                            <input type="password" id="clave" name="clave" class="form-input" placeholder="Ingrese la clave de acceso" required>
+                            <input type="password" id="clave" name="clave" class="form-input"
+                                placeholder="Ingrese la clave de acceso" required>
                         </div>
-                        
+
                         <button type="submit" class="btn btn-primary btn-full">ACCEDER AL PANEL</button>
                     </form>
-                    
+
                     <div class="auth-links">
                         <a href="index.php" class="btn btn-link">Volver al inicio</a>
                     </div>
@@ -66,4 +73,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </div>
     </main>
 </body>
+
 </html>

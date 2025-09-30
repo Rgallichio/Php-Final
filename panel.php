@@ -74,6 +74,7 @@ while ($row = $mensual_result->fetch_assoc()) {
 
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -81,21 +82,27 @@ while ($row = $mensual_result->fetch_assoc()) {
     <link rel="stylesheet" href="style.css">
 </head>
 <!-- Added bg-helicopters class for military helicopter background -->
-<body class="bg-helicopters">
+
+<body class="bg-soldier">
     <!-- Updated header with military styling -->
+
     <header class="military-header">
         <div class="header-content">
             <div class="unit-info">
-                <h1>PANEL DEL ENCARGADO</h1>
-                <h2>REGISTRO DE VIANDAS</h2>
-                <p>COMPAÑÍA DE INGENIEROS QBN 601</p>
+                <h1 class="titulo-principal">
+                    <img src="img/ejercito.png" alt="Logo Ejército Argentino" class="logo-extra">
+                    CA ING QBN APY EMG 601 <br>
+                    <div class="subtitulo">SISTEMA DE GESTIÓN DE VIANDAS</div>
+                    <img src="img/qbn.png" alt="Logo QBN" class="logo-qbn">
+                    <div class="nav-buttons">
+                        <a href="index.php" class="btn btn-primary">VOLVER AL INICIO</a>
+                        <a href="logout.php" class="btn btn-destructive">CERRAR SESIÓN</a>
+                    </div>
+                </h1>
             </div>
             <div class="nav-buttons">
-                <a href="index.php" class="btn btn-secondary">VOLVER AL INICIO</a>
-                <a href="logout.php" class="btn btn-link">CERRAR SESIÓN</a>
-            </div>
-        </div>
     </header>
+
 
     <main class="main-content">
         <!-- Updated filters with military card styling -->
@@ -108,15 +115,17 @@ while ($row = $mensual_result->fetch_assoc()) {
                     <div class="form-row">
                         <div class="form-group">
                             <label for="nombre" class="form-label">Buscar por nombre:</label>
-                            <input type="text" id="nombre" name="nombre" class="form-input" value="<?= htmlspecialchars($busqueda_nombre) ?>" placeholder="Nombre del usuario">
+                            <input type="text" id="nombre" name="nombre" class="form-input"
+                                value="<?= htmlspecialchars($busqueda_nombre) ?>" placeholder="Nombre del usuario">
                         </div>
-                        
+
                         <div class="form-group">
                             <label for="fecha" class="form-label">Filtrar por fecha:</label>
-                            <input type="date" id="fecha" name="fecha" class="form-input" value="<?= htmlspecialchars($busqueda_fecha) ?>">
+                            <input type="date" id="fecha" name="fecha" class="form-input"
+                                value="<?= htmlspecialchars($busqueda_fecha) ?>">
                         </div>
                     </div>
-                    
+
                     <div class="button-group">
                         <button type="submit" class="btn btn-primary">BUSCAR</button>
                         <a href="panel.php" class="btn btn-secondary">REINICIAR</a>
@@ -155,7 +164,7 @@ while ($row = $mensual_result->fetch_assoc()) {
                                     $total_del_dia = 0;
                                     foreach ($viandas as $v):
                                         $total_del_dia += $v['costo'];
-                                    ?>
+                                        ?>
                                         <tr>
                                             <td><?= htmlspecialchars($v['nombre']) ?></td>
                                             <td><?= htmlspecialchars($v['dni']) ?></td>
@@ -168,7 +177,8 @@ while ($row = $mensual_result->fetch_assoc()) {
                                 <tfoot>
                                     <tr class="total-row">
                                         <td colspan="4"><strong>TOTAL DEL DÍA:</strong></td>
-                                        <td class="amount"><strong>$<?= number_format($total_del_dia, 2, ',', '.') ?></strong></td>
+                                        <td class="amount"><strong>$<?= number_format($total_del_dia, 2, ',', '.') ?></strong>
+                                        </td>
                                     </tr>
                                 </tfoot>
                             </table>
@@ -214,4 +224,5 @@ while ($row = $mensual_result->fetch_assoc()) {
         </div>
     </main>
 </body>
+
 </html>

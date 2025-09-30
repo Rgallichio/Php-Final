@@ -26,6 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -33,17 +34,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <link rel="stylesheet" href="style.css">
 </head>
 <!-- Added military background class -->
+
 <body class="bg-helicopters">
-    
+
     <!-- Added military header structure -->
+
     <header class="military-header">
         <div class="header-content">
             <div class="unit-info">
-                <h1>COMPAÑÍA DE INGENIEROS QBN</h1>
-                <h2>APOYO A LAS EMERGENCIAS 601</h2>
-                <p>REGISTRO DE NUEVO USUARIO</p>
+                <h1 class="titulo-principal">
+                    <img src="img/ejercito.png" alt="Logo Ejército Argentino" class="logo-extra">
+                    CA ING QBN APY EMG 601 <br>
+                    <div class="subtitulo">SISTEMA DE GESTIÓN DE VIANDAS</div>
+                    <img src="img/qbn.png" alt="Logo QBN" class="logo-qbn">
+                </h1>
             </div>
-        </div>
+        <div class="nav-buttons">
     </header>
 
     <!-- Updated main content with military card styling -->
@@ -59,30 +65,34 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             <?php echo htmlspecialchars($error); ?>
                         </div>
                     <?php endif; ?>
-                    
+
                     <form method="POST" class="auth-form">
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="nombre" class="form-label">NOMBRE:</label>
-                                <input type="text" id="nombre" name="nombre" class="form-input" placeholder="Ingrese su nombre" required>
+                                <input type="text" id="nombre" name="nombre" class="form-input"
+                                    placeholder="Ingrese su nombre" required>
                             </div>
-                            
+
                             <div class="form-group">
                                 <label for="apellido" class="form-label">APELLIDO:</label>
-                                <input type="text" id="apellido" name="apellido" class="form-input" placeholder="Ingrese su apellido" required>
+                                <input type="text" id="apellido" name="apellido" class="form-input"
+                                    placeholder="Ingrese su apellido" required>
                             </div>
                         </div>
-                        
+
                         <div class="form-group">
                             <label for="correo" class="form-label">CORREO ELECTRÓNICO:</label>
-                            <input type="email" id="correo" name="correo" class="form-input" placeholder="Ingrese su correo electrónico" required>
+                            <input type="email" id="correo" name="correo" class="form-input"
+                                placeholder="Ingrese su correo electrónico" required>
                         </div>
-                        
+
                         <div class="form-group">
                             <label for="dni" class="form-label">DNI:</label>
-                            <input type="text" id="dni" name="dni" class="form-input" placeholder="Ingrese su DNI" required>
+                            <input type="text" id="dni" name="dni" class="form-input" placeholder="Ingrese su DNI"
+                                required>
                         </div>
-                        
+
                         <div class="form-group">
                             <label for="seccion" class="form-label">SECCIÓN:</label>
                             <select id="seccion" name="seccion" class="form-input" required>
@@ -92,15 +102,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                 <option value="Otro">Otro</option>
                             </select>
                         </div>
-                        
+
                         <div class="form-group">
                             <label for="contrasena" class="form-label">CONTRASEÑA:</label>
-                            <input type="password" id="contrasena" name="contrasena" class="form-input" placeholder="Ingrese su contraseña" required>
+                            <input type="password" id="contrasena" name="contrasena" class="form-input"
+                                placeholder="Ingrese su contraseña" required>
                         </div>
-                        
+
                         <button type="submit" class="btn btn-primary btn-full">REGISTRARSE</button>
                     </form>
-                    
+
                     <div class="auth-links">
                         <a href="login.php" class="btn btn-link">¿Ya tiene cuenta? Iniciar sesión</a>
                         <a href="recuperar.php" class="btn btn-link">Recuperar datos de acceso</a>
@@ -111,4 +122,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </div>
     </main>
 </body>
+
 </html>

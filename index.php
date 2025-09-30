@@ -9,12 +9,12 @@ $bloqueado = false;
 $pedido_activo = false;
 
 if ($logueado) {
-    ensure_vianda_utils($conn);
-    $user_id = get_user_id_by_dni($conn, $_SESSION['dni']);
-    if ($user_id) {
-        $pedido_activo = tiene_pedido_ult_12h($conn, $user_id);
-        $bloqueado = $pedido_activo || en_cooldown_12h($conn, $user_id);
-    }
+  ensure_vianda_utils($conn);
+  $user_id = get_user_id_by_dni($conn, $_SESSION['dni']);
+  if ($user_id) {
+    $pedido_activo = tiene_pedido_ult_12h($conn, $user_id);
+    $bloqueado = $pedido_activo || en_cooldown_12h($conn, $user_id);
+  }
 }
 
 // Gestionar alertas (éxito / error) una sola vez
@@ -24,31 +24,31 @@ unset($_SESSION['alerta_ok'], $_SESSION['alerta_error']);
 ?>
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>
     Compañía de Ingenieros QBN Apoyo a las Emergencias 601</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body class="bg-patrol">
-  
+
   <header class="military-header">
     <div class="header-content">
       <div class="unit-info">
         <h1 class="titulo-principal">
-    <img src="img/ejercito.png" alt="Logo Ejército Argentino" class="logo-extra">
-    CA ING QBN APY EMG 601 <br>
-    <div class="subtitulo">SISTEMA DE GESTIÓN DE VIANDAS</div>
-    <img src="img/qbn.png" alt="Logo QBN" class="logo-qbn">
-</h1>
- 
+          <img src="img/ejercito.png" alt="Logo Ejército Argentino" class="logo-extra">
+          CA ING QBN APY EMG 601 <br>
+          <div class="subtitulo">SISTEMA DE GESTIÓN DE VIANDAS</div>
+          <img src="img/qbn.png" alt="Logo QBN" class="logo-qbn">
+        </h1>
       </div>
       <div class="nav-buttons">
         <?php if (!$logueado): ?>
-          
-  
+
+
         <?php else: ?>
           <div class="user-status">
             <span class="status-verified">✓ VERIFICADO</span>
@@ -77,7 +77,7 @@ unset($_SESSION['alerta_ok'], $_SESSION['alerta_error']);
         <div class="card-header">
           <h3>SELECCIÓN DE VIANDAS</h3>
         </div>
-        
+
         <div class="card-body">
           <?php if (!$bloqueado): ?>
             <form action="elegir_vianda.php" method="POST" class="vianda-form">
@@ -146,8 +146,9 @@ unset($_SESSION['alerta_ok'], $_SESSION['alerta_error']);
             <p>Si no posee una cuenta, puede registrarse o recuperar sus datos de acceso.</p>
             <div class="main-content-index">
               <a href="login.php" class="btn btn-primary">INICIAR SESIÓN</a>
+              
               <a href="register.php" class="btn btn-secondary">REGISTRARSE</a>
-              <a href="recuperar.php" class="btn btn-link">RECUPERAR USUARIO</a>
+              <a href="recuperar.php" class="btn btn-secondary-MOD">RECUPERAR USUARIO</a>
 
             </div>
           </div>
@@ -157,4 +158,5 @@ unset($_SESSION['alerta_ok'], $_SESSION['alerta_error']);
   <?php endif; ?>
 
 </body>
+
 </html>
