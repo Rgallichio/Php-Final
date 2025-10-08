@@ -43,10 +43,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div class="header-content">
             <div class="unit-info">
                 <h1 class="titulo-principal">
-                    <img src="img/ejercito.png" alt="Logo Ejército Argentino" class="logo-extra">
-                    CA ING QBN APY EMG 601 <br>
-                    <div class="subtitulo">SISTEMA DE GESTIÓN DE VIANDAS</div>
-                    <img src="img/qbn.png" alt="Logo QBN" class="logo-qbn">
+                    <img src="img/ejercito.png" class="logo-1">
+                    <p class="titulo">CA ING QBN APY EMG 601 </p>
+                    <br>
+                    <p class="subtitulo">SISTEMA DE GESTIÓN DE VIANDAS</p>
+                    <img src="img/qbn.png" class="logo-2">
                 </h1>
             </div>
             <div class="nav-buttons">

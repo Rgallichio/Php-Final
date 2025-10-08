@@ -1,25 +1,21 @@
-/* File: logo-qbn.css */
-.logo-qbn {
-  width: 10%; /* Adjust size for uniform appearance */
-  height: 10%;
-  margin: 0 3em; /* Adds horizontal spacing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
-/* File: logo-extra.css */
-.logo-extra {
-  width: 10%; /* Adjust size for uniform appearance */
-  height: 10%;
-  margin: 0 3em; /* Adds horizontal spacing */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.2;
+  background-color: var(--military-background);
+  color: var(--military-text);
 }
-
-/*logo*/
 .titulo-principal {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   display: flex;
   align-items: center;
   justify-content: center; /* centra el texto y deja logos a los lados */
-  gap:10px; /* espacio entre logo y texto */
-  font-size: 1.2rem;
-  font-weight: bold;
+  gap:3em; /* espacio entre logo y texto */
+  font-size: 2.2em;
   color: var(--military-text);
 }
 
@@ -33,35 +29,16 @@
 }
 
 /* Added SECUETEC logo styling */
-.logo-secuetec {
-  width: 80px;
-  height: 80px;
-  background: #f4d03f;
-  border: 3px solid #05401e;
-  border-radius: 8px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-}
 
-.logo-secuetec::before {
-  content: "☢";
-  font-size: 24px;
-  color: #000;
-  margin-bottom: 2px;
-}
 
-.logo-secuetec::after {
-  content: "SECUETEC";
-  font-size: 10px;
-  font-weight: bold;
-  color: #000;
-  letter-spacing: 0.5px;
+
+.titulo {
+ font-size: 0.7em; /* Adjusts the font size for the title */
+ display:contents; /* Ensures the title behaves as a block element */
+ text-align: center;
 }
 .subtitulo {
- font-size: 0.6em; /* Adjusts the font size for the subtitle */
+ font-size: 0.45em; /* Adjusts the font size for the subtitle */
  display:contents; /* Ensures the subtitle behaves as a block element */
 }
      
@@ -84,20 +61,9 @@
   --military-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
-body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: var(--military-text);
-  line-height: 1.6;
-  min-height: 100vh;
-  position: relative;
-  background: #1a1a1a; /* Dark background as base */
-}
+
+
 
 /* Updated background classes for darker theme */
 .bg-soldier {
@@ -122,9 +88,7 @@ body {
 }
 
 /* Default background for pages without specific class */
-body:not(.bg-soldier):not(.bg-helicopters):not(.bg-patrol) {
-  background: linear-gradient(135deg, #1a1a1a 0%, #2c3e50 50%, #1a1a1a 100%);
-}
+
 
 /* Updated header styling for darker theme */
 .military-header {
@@ -136,12 +100,6 @@ body:not(.bg-soldier):not(.bg-helicopters):not(.bg-patrol) {
   border-bottom: 2px solid var(--military-primary);
 }
 
-.military-header h1,
-.military-header h2,
-.military-header p {
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-}
-
 .header-content {
   max-width: 1200px;
   margin: 0 auto;
@@ -151,34 +109,6 @@ body:not(.bg-soldier):not(.bg-helicopters):not(.bg-patrol) {
   align-items: center;
   flex-wrap: wrap;
   gap: 1rem;
-}
-
-.unit-info h1 {
-  font-size: 1.75rem;
-  font-weight: 700;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  margin-bottom: 0.25rem;
-  color: var(--military-text);
-}
-
-.unit-info h2 {
-  font-size: 1.125rem;
-  font-weight: 600;
-  letter-spacing: 0.025em;
-  text-transform: uppercase;
-  opacity: 0.9;
-  margin-bottom: 0.25rem;
-  color: var(--military-text-light);
-}
-
-.unit-info p {
-  font-size: 0.875rem;
-  font-weight: 500;
-  opacity: 0.8;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: var(--military-text-light);
 }
 
 .nav-buttons {
