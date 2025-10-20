@@ -39,11 +39,7 @@ unset($_SESSION['alerta_ok'], $_SESSION['alerta_error']);
     <div class="header-content">
       <div class="unit-info">
         <h1 class="titulo-principal">
-          <img src="img/ejercito.png" class="">
-          <p class="titulo">CA ING QBN APY EMG 601 </p>
-          <br>
-          <p class="subtitulo">SISTEMA DE GESTIÓN DE VIANDAS</p>
-          <img src="img/qbn.png" class="">
+          <img src="img/banner.jpg" alt="" class="img-banner">
         </h1>
       </div>
       <div class="nav-buttons">
