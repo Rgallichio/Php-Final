@@ -35,18 +35,18 @@ unset($_SESSION['alerta_ok'], $_SESSION['alerta_error']);
 
 <body class="bg-patrol">
 
-<h1 class="titulo-principal">
-          <img src="img/fondurri.png"
+
+
   <header class="military-header">
     <div class="header-content">
       <div class="unit-info">
-         <br>
-          <div class="subtitulo">
-          <img src="img/qbn.png" alt="Logo QBN" class="logo-qbn">
-        </h1>
+         <h1 class="titulo-principal">
+          <img src="img/fondurri.png"</h1>
       </div>
       <div class="nav-buttons">
         <?php if (!$logueado): ?>
+
+
         <?php else: ?>
           <div class="user-status">
             <span class="status-verified">✓ VERIFICADO</span>

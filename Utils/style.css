@@ -110,7 +110,11 @@ body:not(.bg-soldier):not(.bg-helicopters):not(.bg-patrol) {
   border-bottom: 2px solid var(--military-primary);
 }
 
-
+.military-header h1,
+.military-header h2,
+.military-header p {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
 
 .header-content {
   max-width: 1200px;
