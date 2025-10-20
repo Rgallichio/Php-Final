@@ -30,6 +30,8 @@ body {
 
 /* Added SECUETEC logo styling */
 
+
+
 .titulo {
  font-size: 0.7em; /* Adjusts the font size for the title */
  display:contents; /* Ensures the title behaves as a block element */
@@ -99,6 +101,7 @@ body {
 }
 
 .header-content {
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 1rem;
   display: flex;
