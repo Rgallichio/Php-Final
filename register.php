@@ -40,8 +40,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <!-- Added military header structure -->
 
     <header>
-        <img src="img/fondurri.png" class="military-header">
-
+        <a href="index.php">
+            <img src="img/fondurri.png" class="military-header">
+        </a>
         <div class="header-content">
             <div class="unit-info">
 

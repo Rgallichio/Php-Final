@@ -41,8 +41,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <body class="bg-soldier">
     <header>
-        <img src="img/fondurri.png" class="military-header">
-
+        <a href="index.php">
+            <img src="img/fondurri.png" class="military-header">
+        </a>
         <div class="header-content">
             <div class="unit-info">
 

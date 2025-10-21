@@ -40,7 +40,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
     <header>
-        <img src="img/fondurri.png" class="military-header">
+        <a href="index.php">
+            <img src="img/fondurri.png" class="military-header">
+        </a>
         <div class="nav-buttons">
     </header>
 

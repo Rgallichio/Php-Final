@@ -87,8 +87,9 @@ while ($row = $mensual_result->fetch_assoc()) {
     <!-- Updated header with military styling -->
 
     <header>
-        <img src="img/fondurri.png" class="military-header">
-
+        <a href="index.php">
+            <img src="img/fondurri.png" class="military-header">
+        </a>
         <div class="header-content">
             <div class="unit-info">
                 <h1 class="titulo-principal">
