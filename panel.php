@@ -87,12 +87,12 @@ while ($row = $mensual_result->fetch_assoc()) {
     <!-- Updated header with military styling -->
 
     <header>
-              <img src="img/fondurri.png" class="military-header">
+        <img src="img/fondurri.png" class="military-header">
 
         <div class="header-content">
             <div class="unit-info">
                 <h1 class="titulo-principal">
- 
+
                     <div class="nav-buttons">
                         <a href="index.php" class="btn btn-primary">VOLVER AL INICIO</a>
                         <a href="logout.php" class="btn btn-destructive">CERRAR SESIÓN</a>

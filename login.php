@@ -40,8 +40,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
     <header>
-      <img src="img/fondurri.png" class="military-header">
-    <div class="nav-buttons">
+        <img src="img/fondurri.png" class="military-header">
+        <div class="nav-buttons">
     </header>
 
     <!-- Updated login form with military card styling -->

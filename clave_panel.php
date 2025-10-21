@@ -29,7 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <!-- Updated header with military styling -->
 
     <header>
-              <img src="img/fondurri.png" class="military-header">
+        <img src="img/fondurri.png" class="military-header">
 
         <div class="header-content">
             <div class="unit-info">

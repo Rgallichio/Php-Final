@@ -38,18 +38,18 @@ unset($_SESSION['alerta_ok'], $_SESSION['alerta_error']);
 
 
   <header class="">
-      <img src="img/fondurri.png" class="military-header">
-      <div class="nav-buttons">
-        <?php if (!$logueado): ?>
+    <img src="img/fondurri.png" class="military-header">
+    <div class="nav-buttons">
+      <?php if (!$logueado): ?>
 
 
-        <?php else: ?>
-          <div class="user-status">
-            <span class="status-verified">✓ VERIFICADO</span>
-            <a href="logout.php" class="btn btn-secondary">CERRAR SESIÓN</a>
-          </div>
-        <?php endif; ?>
-      </div>
+      <?php else: ?>
+        <div class="user-status">
+          <span class="status-verified">✓ VERIFICADO</span>
+          <a href="logout.php" class="btn btn-secondary">CERRAR SESIÓN</a>
+        </div>
+      <?php endif; ?>
+    </div>
     </div>
   </header>
 
@@ -140,7 +140,7 @@ unset($_SESSION['alerta_ok'], $_SESSION['alerta_error']);
             <p>Si no posee una cuenta, puede registrarse o recuperar sus datos de acceso.</p>
             <div class="main-content-index">
               <a href="login.php" class="btn btn-primary">INICIAR SESIÓN</a>
-              
+
               <a href="register.php" class="btn btn-secondary">REGISTRARSE</a>
               <a href="recuperar.php" class="btn btn-secondary-MOD">RECUPERAR USUARIO</a>
 

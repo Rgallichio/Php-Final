@@ -40,14 +40,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <!-- Added military header structure -->
 
     <header>
-              <img src="img/fondurri.png" class="military-header">
+        <img src="img/fondurri.png" class="military-header">
 
         <div class="header-content">
             <div class="unit-info">
 
                 </h1>
             </div>
-        <div class="nav-buttons">
+            <div class="nav-buttons">
     </header>
 
     <!-- Updated main content with military card styling -->
