@@ -37,12 +37,8 @@ unset($_SESSION['alerta_ok'], $_SESSION['alerta_error']);
 
 
 
-  <header class="military-header">
-    <div class="header-content">
-      <div class="unit-info">
-         <h1 class="titulo-principal">
-          <img src="img/fondurri.png"</h1>
-      </div>
+  <header class="">
+      <img src="img/fondurri.png" class="military-header">
       <div class="nav-buttons">
         <?php if (!$logueado): ?>
 

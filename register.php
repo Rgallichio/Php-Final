@@ -39,12 +39,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     <!-- Added military header structure -->
 
-    <header class="military-header">
+    <header>
+              <img src="img/fondurri.png" class="military-header">
+
         <div class="header-content">
             <div class="unit-info">
-                <h1 class="titulo-principal">
-                    <h1 class="titulo-principal">
-          <img src="img/fondurri.png"</h1>
+
                 </h1>
             </div>
         <div class="nav-buttons">

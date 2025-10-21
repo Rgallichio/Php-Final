@@ -40,12 +40,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 
 <body class="bg-soldier">
-    <header class="military-header">
+    <header>
+              <img src="img/fondurri.png" class="military-header">
+
         <div class="header-content">
             <div class="unit-info">
-                <h1 class="titulo-principal">
-                    <h1 class="titulo-principal">
-          <img src="img/fondurri.png"</h1>
+
 
             </div>
             <div class="nav-buttons">
