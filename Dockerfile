@@ -1,8 +1,12 @@
 FROM php:8.1-apache
 
-# Instalar extensiones necesarias
+# Instalar dependencias necesarias para mysqli
 RUN apt-get update && apt-get install -y \
     libzip-dev zip unzip git \
+    libpng-dev libjpeg-dev libonig-dev libxml2-dev \
+    default-mysql-client \
+    libcurl4-openssl-dev pkg-config libssl-dev \
+    libmysqlclient-dev \
  && docker-php-ext-install mysqli pdo pdo_mysql zip \
  && a2enmod rewrite \
  && rm -rf /var/lib/apt/lists/*
@@ -14,7 +18,7 @@ COPY . /var/www/html/
 RUN chown -R www-data:www-data /var/www/html \
  && chmod -R 755 /var/www/html
 
-# Instalar Composer correctamente
+# Instalar Composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
 # Ejecutar composer install si existe composer.json
